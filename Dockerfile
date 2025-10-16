@@ -45,6 +45,8 @@ RUN \
 COPY /root /
 
 # ports and volumes
-EXPOSE 3001
+EXPOSE 3000
+
+ENV LC_ALL=zh_CN.UTF-8
 
 VOLUME /config
