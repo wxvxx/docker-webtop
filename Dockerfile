@@ -10,10 +10,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE="Alpine XFCE" && \ 
-    LC_ALL=zh_CN.UTF-8 \
-    PUID=1000 \
-    PGID=1000
+ENV TITLE="Alpine XFCE"
     
 RUN \
   echo "**** add icon ****" && \
