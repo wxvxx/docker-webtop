@@ -47,6 +47,8 @@ COPY /root /
 # ports and volumes
 EXPOSE 3000
 
-ENV LC_ALL=zh_CN.UTF-8
+ENV LC_ALL=zh_CN.UTF-8 && \
+    PUID=1000 && \
+    PGID=1000
 
 VOLUME /config
