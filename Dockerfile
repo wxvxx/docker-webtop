@@ -10,8 +10,11 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="thelamer"
 
 # title
-ENV TITLE="Alpine XFCE"
-
+ENV TITLE="Alpine XFCE" && \ 
+    LC_ALL=zh_CN.UTF-8 \
+    PUID=1000 \
+    PGID=1000
+    
 RUN \
   echo "**** add icon ****" && \
   curl -o \
@@ -46,9 +49,5 @@ COPY /root /
 
 # ports and volumes
 EXPOSE 3000
-
-ENV LC_ALL=zh_CN.UTF-8 && \
-    PUID=1000 && \
-    PGID=1000
 
 VOLUME /config
